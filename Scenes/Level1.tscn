@@ -1,0 +1,199 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Objects/EnergyPower/PowerBullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/enemy/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Level1Sprite.png" type="Texture" id=3]
+[ext_resource path="res://Objects/player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Level1.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 364.436, 2.56514 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 348.891, 2.14093 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 302.574, 1.66666 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 83.079, 0.928894 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 369.522, 1.6196 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 1.28548, 67.7574 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 1.96313, 71.8768 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 1.535, 202.686 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 1.65843, 127.875 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 1.20261, 67.748 )
+
+[sub_resource type="CapsuleShape2D" id=12]
+radius = 12.085
+height = 24.1091
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 19.8972, 4.04022 )
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="Level1Sprite" type="Sprite" parent="Borders"]
+position = Vector2( 307.622, 321.171 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 363.64, 10.4799 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 378.737, 411.321 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 302.591, 140.556 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -51.0009, 551.662 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 235.468, 292.274 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -2.27728, 75.1955 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 603.16, 216.669 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 729.787, 210.612 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -132.279, 422.25 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 30.7435, 481.966 )
+shape = SubResource( 10 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 86.5986, 60.6641 )
+
+[node name="Enemys" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemys" instance=ExtResource( 2 )]
+position = Vector2( 297.555, 94.9362 )
+player = NodePath("../../Player")
+
+[node name="Enemy2" parent="Enemys" instance=ExtResource( 2 )]
+position = Vector2( 562.437, 94.9362 )
+player = NodePath("../../Player")
+
+[node name="Enemy3" parent="Enemys" instance=ExtResource( 2 )]
+position = Vector2( 675.958, 94.9362 )
+player = NodePath("../../Player")
+
+[node name="Enemy4" parent="Enemys" instance=ExtResource( 2 )]
+position = Vector2( 675.958, 242.934 )
+player = NodePath("../../Player")
+
+[node name="Enemy5" parent="Enemys" instance=ExtResource( 2 )]
+position = Vector2( 333.714, 350.569 )
+player = NodePath("../../Player")
+
+[node name="Enemy6" parent="Enemys" instance=ExtResource( 2 )]
+position = Vector2( -41.2171, 497.472 )
+player = NodePath("../../Player")
+
+[node name="Tuzaklar" type="Area2D" parent="." groups=[
+"Tuzak",
+]]
+position = Vector2( 562.549, 348.29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuzaklar"]
+position = Vector2( 0.580688, -0.187317 )
+rotation = 1.47645
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tuzaklar"]
+position = Vector2( -145.081, 3.37628 )
+rotation = 1.47645
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tuzaklar"]
+position = Vector2( -263.125, 36.3395 )
+rotation = 1.61676
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tuzaklar"]
+position = Vector2( -405.669, 4.26727 )
+rotation = 1.50373
+shape = SubResource( 12 )
+
+[node name="Powers" type="Node" parent="."]
+
+[node name="PowerBullet" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 673.393, 369.176 )
+
+[node name="PowerBullet9" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 703.798, 344.427 )
+
+[node name="PowerBullet3" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 706.505, 380.86 )
+
+[node name="PowerBullet4" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 655.153, 392.926 )
+
+[node name="PowerBullet2" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 628.775, 376.089 )
+
+[node name="PowerBullet5" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 43.5612, 328.71 )
+
+[node name="PowerBullet6" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 76.6739, 341.338 )
+
+[node name="PowerBullet10" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 68.2649, 380.019 )
+
+[node name="PowerBullet7" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 25.3212, 353.404 )
+
+[node name="PowerBullet8" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( -1.0567, 336.567 )
+
+[node name="PowerBullet11" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 52.5232, 120.294 )
+
+[node name="PowerBullet12" parent="Powers" instance=ExtResource( 1 )]
+position = Vector2( 26.1453, 103.457 )
+
+[node name="Finish" type="Area2D" parent="."]
+position = Vector2( -51.1559, 546.641 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
+position = Vector2( -0.146332, -0.0775146 )
+shape = SubResource( 11 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SceneTransitionRect" parent="CanvasLayer" instance=ExtResource( 6 )]
+
+[connection signal="body_entered" from="Finish" to="." method="_on_Finish_body_entered"]

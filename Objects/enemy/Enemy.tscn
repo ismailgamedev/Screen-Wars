@@ -1,0 +1,150 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Sprites/ENEMY LIGHT.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/EnemyAnimations.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/kumanda.png" type="Texture" id=3]
+[ext_resource path="res://Objects/enemy/Enemy.gd" type="Script" id=4]
+[ext_resource path="res://sounds/shootound.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/enemyhitsound.wav" type="AudioStream" id=6]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 10.0419
+height = 7.42764
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 122.259, 125.387 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14.2334, 11.9343 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "die"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 7, 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "walk"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 6 ]
+}
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.111362, -0.668175 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="AnimationSprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 9
+frame = 7
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 0.598724, 7.43684 )
+scale = Vector2( 0.395208, 0.460523 )
+texture = ExtResource( 1 )
+texture_scale = 1.52
+color = Color( 1, 0, 0, 1 )
+energy = 2.15
+shadow_enabled = true
+
+[node name="Kumanda" type="Position2D" parent="."]
+position = Vector2( -9.22677, 4.56378 )
+
+[node name="kumandaSprite" type="Sprite" parent="Kumanda"]
+position = Vector2( -0.143058, -0.0841589 )
+rotation = -4.71238
+scale = Vector2( 0.801575, 0.801575 )
+texture = ExtResource( 3 )
+
+[node name="DistanceCheck" type="Area2D" parent="." groups=[
+"Distance",
+]]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DistanceCheck"]
+position = Vector2( 0, 0.793701 )
+shape = SubResource( 2 )
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/die = SubResource( 4 )
+anims/idle = SubResource( 5 )
+anims/walk = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -4.0
+
+[node name="hitsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -4.0
+
+[connection signal="area_entered" from="DistanceCheck" to="." method="_on_DistanceCheck_area_entered"]
+[connection signal="area_exited" from="DistanceCheck" to="." method="_on_DistanceCheck_area_exited"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/MenuBackground.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/HakkindaMenu.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.372549, 0.372549, 0.372549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.239216, 0.203922, 0.203922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="HakkindaMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Background"]
+margin_left = 117.349
+margin_top = 28.3966
+margin_right = 230.349
+margin_bottom = 151.397
+rect_scale = Vector2( 1.06431, 0.957875 )
+custom_fonts/font = ExtResource( 1 )
+text = "Kod & Çizim & Ses
+Ismail Filipov
+
+Godot Türk Topluluğu
+Game Jami için
+yapılmıştır"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 156.895
+margin_top = 145.009
+margin_right = 197.895
+margin_bottom = 169.009
+rect_scale = Vector2( 0.792341, 0.792341 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Geri"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SceneTransitionRect" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

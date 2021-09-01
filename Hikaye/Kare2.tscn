@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Hikaye/Hikaye Kare2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Hikaye/Kare2.gd" type="Script" id=4]
+
+[node name="Kare2" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -146.698
+margin_top = -16.1787
+margin_right = 213.302
+margin_bottom = 1.82126
+rect_scale = Vector2( 0.829934, 0.829934 )
+custom_fonts/font = ExtResource( 1 )
+text = "Ama bir gün AMOLED ekranlar geldi ve LCD ekranları koltuğundan etti"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SceneTransitionRect" parent="." instance=ExtResource( 3 )]
+
+[connection signal="pressed" from="." to="." method="_on_Kare2_pressed"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Hikaye/Hikaye Kare3.png" type="Texture" id=3]
+[ext_resource path="res://Hikaye/Kare3.gd" type="Script" id=4]
+
+[node name="Kare3" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -177.767, 42.177 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+texture_disabled = ExtResource( 3 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.28027
+margin_top = -18.6299
+margin_right = 7.28027
+margin_bottom = -0.629929
+rect_scale = Vector2( 0.965793, 0.965793 )
+custom_fonts/font = ExtResource( 1 )
+text = "Tek LCD ekran sen kaldın ve AMOLED ekranlardan kurtulman gerek"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SceneTransitionRect" parent="." instance=ExtResource( 2 )]
+
+[connection signal="pressed" from="." to="." method="_on_Kare3_pressed"]

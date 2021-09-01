@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Hikaye/Hikaye Kare1.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Hikaye/Kare1.gd" type="Script" id=4]
+
+[node name="Kare1" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -180.0
+margin_top = -18.0
+margin_right = 180.0
+custom_fonts/font = ExtResource( 1 )
+text = "Çok eskiden dünya'ya LCD ekranlar hâkimdi"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SceneTransitionRect" parent="." instance=ExtResource( 3 )]
+
+[connection signal="pressed" from="." to="." method="_on_Kare1_pressed"]

@@ -1,0 +1,409 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Sprites/Level3.png" type="Texture" id=1]
+[ext_resource path="res://Objects/bicak/bicak.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/lazer/Lazer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/enemy/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/EnergyPower/PowerBullet.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Level3.gd" type="Script" id=8]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 10.9142
+height = 29.0869
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3.19997, 207.29 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 20.4217, 89.91 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.5465, 78.6225 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 10, 195.616 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 21.1942, 4.36926 )
+
+[node name="Level3" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Tuzaklar" type="Node" parent="."]
+
+[node name="bicak" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -17.0138, 405.054 )
+
+[node name="bicak2" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -43.1768, 405.054 )
+
+[node name="bicak3" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 6.67424, 405.054 )
+
+[node name="bicak4" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 28.5945, 405.054 )
+
+[node name="bicak5" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 52.9897, 405.054 )
+
+[node name="bicak6" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -137.86, 405.054 )
+
+[node name="bicak7" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -164.023, 405.054 )
+
+[node name="bicak8" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -114.172, 405.054 )
+
+[node name="bicak9" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -92.2518, 405.054 )
+
+[node name="bicak10" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -67.8566, 405.054 )
+
+[node name="bicak11" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 108.491, 405.054 )
+
+[node name="bicak12" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 82.3281, 405.054 )
+
+[node name="bicak13" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 132.179, 405.054 )
+
+[node name="bicak14" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 154.099, 405.054 )
+
+[node name="bicak15" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 178.495, 405.054 )
+
+[node name="bicak16" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -17.0138, 454.054 )
+
+[node name="bicak17" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -43.1768, 454.054 )
+
+[node name="bicak18" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 6.67424, 454.054 )
+
+[node name="bicak19" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 28.5945, 454.054 )
+
+[node name="bicak20" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 52.9897, 454.054 )
+
+[node name="bicak21" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -137.86, 454.054 )
+
+[node name="bicak22" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -164.023, 454.054 )
+
+[node name="bicak23" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -114.172, 454.054 )
+
+[node name="bicak24" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -92.2517, 454.054 )
+
+[node name="bicak25" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -67.8566, 454.054 )
+
+[node name="bicak26" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 108.491, 454.054 )
+
+[node name="bicak27" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 82.3281, 454.054 )
+
+[node name="bicak28" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 132.179, 454.054 )
+
+[node name="bicak29" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 154.099, 454.054 )
+
+[node name="bicak30" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 178.495, 454.054 )
+
+[node name="bicak31" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -17.0138, 506.054 )
+
+[node name="bicak32" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -43.1768, 506.054 )
+
+[node name="bicak33" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 6.67424, 506.054 )
+
+[node name="bicak34" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 28.5945, 506.054 )
+
+[node name="bicak35" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 52.9897, 506.054 )
+
+[node name="bicak36" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -137.86, 506.054 )
+
+[node name="bicak37" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -164.023, 506.054 )
+
+[node name="bicak38" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -114.172, 506.054 )
+
+[node name="bicak39" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -92.2517, 506.054 )
+
+[node name="bicak40" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -67.8566, 506.054 )
+
+[node name="bicak41" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 108.491, 506.054 )
+
+[node name="bicak42" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 82.3281, 506.054 )
+
+[node name="bicak43" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 132.179, 506.054 )
+
+[node name="bicak44" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 154.099, 506.054 )
+
+[node name="bicak45" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 178.495, 506.054 )
+
+[node name="bicak46" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -17.0138, 562.054 )
+
+[node name="bicak47" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -43.1768, 562.054 )
+
+[node name="bicak48" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 6.67424, 562.054 )
+
+[node name="bicak49" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 28.5945, 562.054 )
+
+[node name="bicak50" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 52.9897, 562.054 )
+
+[node name="bicak51" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -137.86, 562.054 )
+
+[node name="bicak52" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -164.023, 562.054 )
+
+[node name="bicak53" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -114.172, 562.054 )
+
+[node name="bicak54" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -92.2517, 562.054 )
+
+[node name="bicak55" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -67.8566, 562.054 )
+
+[node name="bicak56" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 108.491, 562.054 )
+
+[node name="bicak57" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 82.3281, 562.054 )
+
+[node name="bicak58" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 132.179, 562.054 )
+
+[node name="bicak59" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 154.099, 562.054 )
+
+[node name="bicak60" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 178.495, 562.054 )
+
+[node name="bicak61" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -17.0138, 613.054 )
+
+[node name="bicak62" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -43.1768, 613.054 )
+
+[node name="bicak63" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 6.67424, 613.054 )
+
+[node name="bicak64" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 28.5945, 613.054 )
+
+[node name="bicak65" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 52.9897, 613.054 )
+
+[node name="bicak66" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -137.86, 613.054 )
+
+[node name="bicak67" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -164.023, 613.054 )
+
+[node name="bicak68" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -114.172, 613.054 )
+
+[node name="bicak69" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -92.2517, 613.054 )
+
+[node name="bicak70" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( -67.8566, 613.054 )
+
+[node name="bicak71" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 108.491, 613.054 )
+
+[node name="bicak72" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 82.3281, 613.054 )
+
+[node name="bicak73" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 132.179, 613.054 )
+
+[node name="bicak74" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 154.099, 613.054 )
+
+[node name="bicak75" parent="Tuzaklar" instance=ExtResource( 2 )]
+position = Vector2( 178.495, 613.054 )
+
+[node name="Su" type="Area2D" parent="Tuzaklar" groups=[
+"Tuzak",
+]]
+position = Vector2( -118.605, 807.352 )
+rotation = 1.45206
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuzaklar/Su"]
+shape = SubResource( 1 )
+
+[node name="Su4" type="Area2D" parent="Tuzaklar" groups=[
+"Tuzak",
+]]
+position = Vector2( 2.8656, 328.144 )
+rotation = 1.45206
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuzaklar/Su4"]
+shape = SubResource( 1 )
+
+[node name="Su2" type="Area2D" parent="Tuzaklar" groups=[
+"Tuzak",
+]]
+position = Vector2( 4.86789, 749.286 )
+rotation = 1.45206
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuzaklar/Su2"]
+shape = SubResource( 1 )
+
+[node name="Su3" type="Area2D" parent="Tuzaklar" groups=[
+"Tuzak",
+]]
+position = Vector2( 135.015, 806.017 )
+rotation = 1.45206
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuzaklar/Su3"]
+shape = SubResource( 1 )
+
+[node name="Lazer" parent="Tuzaklar" instance=ExtResource( 4 )]
+position = Vector2( 66.544, 372.649 )
+rotation = 1.57079
+
+[node name="Lazer2" parent="Tuzaklar" instance=ExtResource( 4 )]
+position = Vector2( -57.7153, 684.841 )
+rotation = -1.5708
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="Level3" type="Sprite" parent="Borders"]
+position = Vector2( -14.7591, 416.273 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -100.351, 149.014 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -188.647, 510.447 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 197.541, 504.901 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -188.647, 915.162 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 197.541, 909.616 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 124.414, 149.014 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 11.7563, -42.5241 )
+rotation = -1.57079
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -147.072, 360.478 )
+rotation = -1.57079
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 154.81, 360.478 )
+rotation = -1.57079
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -137.378, 682.547 )
+rotation = -1.57079
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 7.01442, 871.887 )
+rotation = -1.57079
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 145.803, 682.547 )
+rotation = -1.57079
+shape = SubResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -2.77896, 1.75821 )
+
+[node name="Enemys" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemys" instance=ExtResource( 5 )]
+position = Vector2( -80.5582, 836.316 )
+player = NodePath("../../Player")
+
+[node name="Enemy4" parent="Enemys" instance=ExtResource( 5 )]
+position = Vector2( 14.7935, 245.136 )
+player = NodePath("../../Player")
+
+[node name="Enemy2" parent="Enemys" instance=ExtResource( 5 )]
+position = Vector2( 8.53165, 809.589 )
+player = NodePath("../../Player")
+
+[node name="Enemy3" parent="Enemys" instance=ExtResource( 5 )]
+position = Vector2( 110.985, 839.88 )
+player = NodePath("../../Player")
+
+[node name="PowerBullet" parent="." instance=ExtResource( 6 )]
+position = Vector2( -41.9128, 650.775 )
+rotation = -1.57079
+
+[node name="PowerBullet2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -0.485107, 651.004 )
+rotation = -1.57079
+
+[node name="PowerBullet3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 37.6786, 651.565 )
+rotation = -1.57079
+
+[node name="NextLevel" type="Area2D" parent="."]
+position = Vector2( 7.82914, 857.882 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
+position = Vector2( 0.926941, -0.132446 )
+shape = SubResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SceneTransitionRect" parent="CanvasLayer" instance=ExtResource( 7 )]
+
+[connection signal="body_entered" from="NextLevel" to="." method="_on_NextLevel_body_entered"]

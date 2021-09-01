@@ -1,0 +1,239 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Sprites/Level5.png" type="Texture" id=1]
+[ext_resource path="res://Objects/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/EnergyPower/PowerBullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Level5.gd" type="Script" id=4]
+[ext_resource path="res://Objects/enemy/Boss.tscn" type="PackedScene" id=5]
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/bicak/bicak.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 78.3055, 7.15197 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 319.592, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 220.914, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 115.203, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 4.52807, 30.4394 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+[sub_resource type="StyleBoxFlat" id=8]
+
+[sub_resource type="StyleBoxFlat" id=9]
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+[node name="Level5" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="Level5" type="Sprite" parent="Borders"]
+position = Vector2( 383.701, 49.784 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -5.55591, -36.1134 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 392.444, -234.113 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 392.444, 218.277 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 707.809, -7.4628 )
+rotation = 1.57079
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -80.9575, 1.98425 )
+rotation = -1.57079
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 62.342, -157.369 )
+rotation = -1.57079
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 63.1858, 174.394 )
+rotation = -1.57079
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -5.15905, 51.9874 )
+shape = SubResource( 1 )
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2( 385.738, 7.23779 )
+zoom = Vector2( 2.09, 2.716 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -24.5, 13.5 )
+
+[node name="Powers" type="Node" parent="."]
+
+[node name="PowerBullet" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 91.2372, -199.292 )
+
+[node name="PowerBullet13" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 131.555, -155.195 )
+
+[node name="PowerBullet14" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 630.483, -158.975 )
+
+[node name="PowerBullet15" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 627.964, 137.106 )
+
+[node name="PowerBullet16" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 131.555, 143.406 )
+
+[node name="PowerBullet2" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 90.3963, -149.68 )
+
+[node name="PowerBullet3" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 138.748, -199.713 )
+
+[node name="PowerBullet4" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 681.193, -201.832 )
+
+[node name="PowerBullet5" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 637.225, -203.951 )
+
+[node name="PowerBullet6" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 680.663, -157.334 )
+
+[node name="PowerBullet7" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 679.076, 180.782 )
+
+[node name="PowerBullet8" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 679.076, 136.335 )
+
+[node name="PowerBullet9" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 626.692, 182.369 )
+
+[node name="PowerBullet10" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 93.3248, 183.957 )
+
+[node name="PowerBullet11" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 93.3248, 145.859 )
+
+[node name="PowerBullet12" parent="Powers" instance=ExtResource( 3 )]
+position = Vector2( 134.597, 183.957 )
+
+[node name="Camera" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera"]
+position = Vector2( 68.7558, 10.4853 )
+shape = SubResource( 5 )
+
+[node name="Boss" parent="." instance=ExtResource( 5 )]
+position = Vector2( 379.308, -9.72485 )
+player = NodePath("../Player")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SceneTransitionRect" parent="CanvasLayer" instance=ExtResource( 7 )]
+
+[node name="Finish" type="Button" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -18.5
+margin_top = -43.3552
+margin_right = 18.5
+margin_bottom = -19.3552
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = ExtResource( 6 )
+text = "Bitir"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tuzak" type="Node" parent="."]
+
+[node name="bicak" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 382.64, 167.906 )
+
+[node name="bicak2" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 381.972, 117.182 )
+
+[node name="bicak3" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 257.832, 131.865 )
+
+[node name="bicak4" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 249.823, 171.91 )
+
+[node name="bicak5" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 198.432, 72.4644 )
+
+[node name="bicak6" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 120.344, 68.4599 )
+
+[node name="bicak7" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 213.783, -22.9766 )
+
+[node name="bicak8" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 136.362, -46.3363 )
+
+[node name="bicak9" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 251.158, -99.0625 )
+
+[node name="bicak10" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 187.753, -140.443 )
+
+[node name="bicak11" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 342.595, -127.094 )
+
+[node name="bicak12" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 319.235, -181.155 )
+
+[node name="bicak13" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 452.051, -132.433 )
+
+[node name="bicak14" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 452.719, -189.832 )
+
+[node name="bicak15" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 518.793, -87.049 )
+
+[node name="bicak16" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 585.535, -139.108 )
+
+[node name="bicak17" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 527.47, -24.3115 )
+
+[node name="bicak18" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 610.23, -34.9902 )
+
+[node name="bicak19" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 514.122, 65.1228 )
+
+[node name="bicak20" parent="Tuzak" instance=ExtResource( 8 )]
+position = Vector2( 566.18, 131.865 )
+
+[connection signal="body_entered" from="Camera" to="Player" method="_on_Camera_body_entered"]
+[connection signal="body_exited" from="Camera" to="." method="_on_Camera_body_exited"]
+[connection signal="pressed" from="CanvasLayer/Finish" to="." method="_on_Finish_pressed"]

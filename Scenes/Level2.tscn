@@ -1,0 +1,177 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/Level2.png" type="Texture" id=1]
+[ext_resource path="res://Objects/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/enemy/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/lazer/Lazer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/EnergyPower/PowerBullet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Level2.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/SceneTransitionRect.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10.6001, 86.9669 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 10, 337.433 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 11.7018, 145.733 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 10, 80.6423 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10, 199.509 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 21.1942, 4.36926 )
+
+[node name="Level2" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="Level2" type="Sprite" parent="Borders"]
+position = Vector2( -383.627, 390.847 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -70.9647, 15.865 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 21.9288, -53.4418 )
+rotation = 1.57079
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -246.123, 192.557 )
+rotation = 1.57079
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -414.996, 79.7566 )
+rotation = 1.57079
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
+position = Vector2( 75.645, 103.531 )
+rotation = 3.14159
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -720.735, 216.424 )
+rotation = 3.14159
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -845.467, 478.487 )
+rotation = 3.14159
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -444.812, 478.487 )
+rotation = 3.14159
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -573.314, 279.858 )
+rotation = 3.14159
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -502.648, 350.998 )
+rotation = 1.57079
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -652.438, 615.915 )
+rotation = 1.57079
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Borders"]
+position = Vector2( -804.648, 352.1 )
+rotation = 1.57079
+shape = SubResource( 10 )
+
+[node name="Enemys" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemys" instance=ExtResource( 3 )]
+position = Vector2( -782, 545.115 )
+player = NodePath("../../Player")
+
+[node name="Enemy2" parent="Enemys" instance=ExtResource( 3 )]
+position = Vector2( -650, 545.115 )
+player = NodePath("../../Player")
+
+[node name="Enemy3" parent="Enemys" instance=ExtResource( 3 )]
+position = Vector2( -498, 541.115 )
+player = NodePath("../../Player")
+
+[node name="Lazers" type="Node" parent="."]
+
+[node name="Lazer" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -74.1207, 100.585 )
+
+[node name="Lazer2" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -126.199, 102.241 )
+
+[node name="Lazer3" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -173.196, 102.018 )
+
+[node name="Lazer4" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -215.219, 102.065 )
+
+[node name="Lazer5" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -260.224, 101.999 )
+
+[node name="Lazer6" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -313.219, 102.063 )
+
+[node name="Lazer7" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -362.184, 101.003 )
+
+[node name="Lazer8" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -409.21, 100.971 )
+
+[node name="Lazer9" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -477.314, 100.9 )
+
+[node name="Lazer10" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -525.141, 101.061 )
+
+[node name="Lazer11" parent="Lazers" instance=ExtResource( 4 )]
+position = Vector2( -568.226, 98.0963 )
+
+[node name="SuTuzak" type="Area2D" parent="Lazers" groups=[
+"Tuzak",
+]]
+position = Vector2( -645.395, 350.395 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lazers/SuTuzak"]
+polygon = PoolVector2Array( 23.6039, -10.6992, 1.97559, -14.7669, -11.1204, -12.6834, -24.8118, -5.83774, -27.7881, 0.809479, -15.3866, 11.326, 1.0827, 12.0205, 20.4291, 5.47247, 27.4733, -0.480286 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4.89398, -8.22331 )
+
+[node name="PowerBullet" parent="." instance=ExtResource( 5 )]
+position = Vector2( -679.149, 169.371 )
+
+[node name="PowerBullet2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -658.643, 222.404 )
+
+[node name="PowerBullet3" parent="." instance=ExtResource( 5 )]
+position = Vector2( -623.995, 183.513 )
+
+[node name="NextLevel" type="Area2D" parent="."]
+position = Vector2( -655.051, 601.619 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
+position = Vector2( 0.926941, -0.132446 )
+shape = SubResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SceneTransitionRect" parent="CanvasLayer" instance=ExtResource( 7 )]
+
+[connection signal="body_entered" from="NextLevel" to="." method="_on_NextLevel_body_entered"]
